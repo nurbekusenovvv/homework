@@ -1,13 +1,15 @@
 class Student:
     def __init__(self,name):
         self.name = name
-
+    def __str__(self):
+        return f'name is {self.name}'
 
 
 class Teacher(Student):
     def __init__(self,age):
         self.age = age
-
+    def __str__(self):
+        return f'age is {self.age}'
 
 class Run(Teacher):
     def __init__(self,name):
