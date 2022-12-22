@@ -19,23 +19,23 @@ class Run(Teacher):
 # r.run()
 
 
-class Fly(Run):
+class BirthYear(Run):
     def __init__(self,age):
         self.age=age
-    def fly(self):
-        print('age is',self.age,)
+    def byear(self):
+        print('year is', 2022-self.age)
 # f = Fly(20)
 # f.fly()
 
-class Last(Fly):
+class Last(BirthYear):
     def __init__(self,name,age):
         self.name=name
         self.age=age
 r = Run('Nurlan')
 r.run()
 
-f = Fly(20)
-f.fly()
+bt= BirthYear(20)
+bt.byear()
 
 
 
