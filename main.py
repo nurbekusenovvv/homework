@@ -1,40 +1,47 @@
 class Student:
     def __init__(self,name):
         self.name = name
-    def __str__(self):
-        return f'name is {self.name}'
 
-student = Student('Nurbek')
-print(student)
 
-class Teacher:
+
+class Teacher(Student):
     def __init__(self,age):
         self.age = age
-    def __str__(self):
-        return f'age is {self.age}'
-teacher = Teacher(20)
-print(teacher)
 
-class Run:
+
+class Run(Teacher):
+    def __init__(self,name):
+        self.name = name
     def run(self):
-        print(self,'run')
-#     def __str__(self):
-#         return f'{self.name} is running'
-# r = Run("Murat")
-# print(r)
+        print(self.name,'is runing')
 
-class Fly:
+# r = Run('Nurlan')
+# r.run()
+
+
+class Fly(Run):
+    def __init__(self,age):
+        self.age=age
     def fly(self):
-        print(self,'fly')
-#     def __str__(self):
-#         return f'{self.name} is flying'
-# f = Fly("Nurlan")
-# print(f)
+        print('age is',self.age,)
+# f = Fly(20)
+# f.fly()
 
-class President(Student,Teacher,Run,Fly):...
+class Last(Fly):
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+r = Run('Nurlan')
+r.run()
 
-press = President('Sadyr',55)
-press.run()
+f = Fly(20)
+f.fly()
+
+
+# class President(Student,Teacher,Run,Fly):...
+#
+# press = President('Sadyr',55)
+# press.run()
 #     def __str__(self):
 #         return f'name is {self.name}\n'\
 #                f'age is {self.age}\n'\
