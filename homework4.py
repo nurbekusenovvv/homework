@@ -38,14 +38,4 @@ f = Fly(20)
 f.fly()
 
 
-# class President(Student,Teacher,Run,Fly):...
-#
-# press = President('Sadyr',55)
-# press.run()
-#     def __str__(self):
-#         return f'name is {self.name}\n'\
-#                f'age is {self.age}\n'\
-#                f'{self.name} is running\n'\
-#                f'{self.name} is flying'
-# pres = President("Sadyr",50)
-# print(pres.name,pres.age,pres.run(),pres.fly())
+
