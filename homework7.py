@@ -30,6 +30,7 @@ class Solution:
         return search_res
 
     value = 68
+    
     result = binary_search(get_list(), value)
     if result:
         print("Элемент найден!",result)

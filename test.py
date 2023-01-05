@@ -1,25 +1,47 @@
 def get_list() -> list:
     return list(range(0, 1_000_000, 2))
 
-def get_target():
-    return 4
+
 """
     what is Binary Search?
     then do Solution for search target in list
 """
 
 
-class Solution():
+class Solution:
     """
         find_target -> YOUR_CODE
     """
 
+    def binary_search(lst, search_item):
+        low = 0
+        high = len(lst) - 1
+        search_res = None
 
-    def find_target(self, list, target):
-        for k in enumerate(list):
-            if k[1] == target:
-                return k[0]
-        return None
+        while low <= high and not search_res:
+            middle = (low + high) // 2
+            guess = lst[middle]
+            if guess == search_item:
+                search_res = guess
+            if guess > search_item:
+                high = middle - 1
+            else:
+                low = middle + 1
+        return search_res
+
+    # value = 68
+
+    # result = binary_search(get_list(), value)
+    # if result:
+    #     print("Элемент найден!", result)
+    # else:
+    #     print("Элемент не найден.", result)
+value = 68
+n = Solution.binary_search(get_list(),value)
+if n:
+    print("Элемент найден!", n)
+else:
+    print("Элемент не найден.", n)
 
 
-print('искомый элемент',get_target(),'находится под индексом',Solution())
+
