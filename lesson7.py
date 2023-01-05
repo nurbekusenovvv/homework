@@ -88,7 +88,7 @@ print('стало', nums)
 ma = sorted(nums)
 print(ma)
 
-nu = 0
+nu = 44
 
 lowest = 0
 highest = len(ma) - 1

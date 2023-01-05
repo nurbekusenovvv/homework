@@ -23,3 +23,6 @@ class Solution():
 
 
 print('искомый элемент',get_target(),'находится под индексом',Solution())
+
+
+
