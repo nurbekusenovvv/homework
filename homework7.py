@@ -1,12 +1,6 @@
 def get_list() -> list:
     return list(range(0, 1_000_000, 2))
 
-# def get_target():
-#     return 4
-
-
-
-
 
 """
     what is Binary Search?
@@ -14,28 +8,34 @@ def get_list() -> list:
 """
 
 
-class Solution():
+class Solution:
     """
         find_target -> YOUR_CODE
     """
-    nu = 44
 
-    lowest = 0
-    highest = len(get_list()) - 1
-    index = None
+    def binary_search(lst, search_item):
+        low = 0
+        high = len(lst) - 1
+        search_res = None
 
-    while (lowest <= highest) and (index is None):
-        # повторять пока не найдем
-        mid = (lowest + highest) // 2
-        if get_list()[mid] == nu:
-            index = mid
-        else:
-            if nu < get_list()[mid]:
-                # ищем по левой части списка
-                highest = mid - 1
+        while low <= high and not search_res:
+            middle = (low + high) // 2
+            guess = lst[middle]
+            if guess == search_item:
+                search_res = guess
+            if guess > search_item:
+                high = middle - 1
             else:
-                # по правой
-                lowest = mid + 1
+                low = middle + 1
+        return search_res
 
-    print('искомый элемент', nu, 'находиться под индексом', index)
+    value = 68
+    result = binary_search(get_list(), value)
+    if result:
+        print("Элемент найден!",result)
+    else:
+        print("Элемент не найден.",result)
+
+
+
 
